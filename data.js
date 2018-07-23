@@ -29,10 +29,10 @@ cities.forEach(city => {
   bulk.push(city)
 })
 
-client.bulk({ body: bulk }, function (err, response) {
+client.bulk({ body: bulk }, (err, response) => {
   if (err) {
     console.log("Failed Bulk operation", err)
   } else {
-    console.log("Successfully imported", cities.length);
+    console.log("Successfully imported", cities.length)
   }
-});
+})
