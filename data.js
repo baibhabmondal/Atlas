@@ -14,3 +14,17 @@ error => {
       console.log('200 server is fine')
     }
 })
+
+client.index({
+  index: 'elasticsearch',
+  type: 'cities_list',
+  body: {
+    "key1": "content1"
+  }
+  }, (err, res, status) => {
+  if (err) {
+    console.log(err)
+  } else {
+    console.log(res)
+  }
+})
